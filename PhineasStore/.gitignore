@@ -1,0 +1,10 @@
+# Tailwind / Node
+node_modules/
+theme/node_modules/
+theme/static/css/dist/
+
+
+# Virtual environment
+venv/
+env/
+.venv/
