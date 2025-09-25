@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
     'tailwind',
     'theme',
-    'theme2',
+    "django_browser_reload",
 ]
 
 MIDDLEWARE = [
@@ -63,6 +63,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'PhineasStore.urls'
@@ -70,7 +71,7 @@ ROOT_URLCONF = 'PhineasStore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "DIRS": [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -146,4 +147,5 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 
-TAILWIND_APP_NAME = "theme2"
+TAILWIND_APP_NAME = "theme"
+
